@@ -1,0 +1,192 @@
+/* Optimizaciones para tablets y pantallas medianas */
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .modal-content {
+    width: 85%;
+    padding: 2rem;
+  }
+
+  .items-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .menu-item {
+    padding: 1.25rem;
+  }
+}
+
+/* Optimizaciones para PC y pantallas grandes */
+@media screen and (min-width: 1024px) {
+  .modal-overlay {
+    padding: 2rem;
+  }
+
+  .modal-content {
+    width: 80%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .form-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .menu-section {
+    grid-column: 1;
+    margin-top: 0;
+    border-top: none;
+    padding-right: 2rem;
+    border-right: 1px solid #eee;
+  }
+
+  .items-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .menu-item {
+    padding: 1.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .menu-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .resumen-pedido {
+    grid-column: 2;
+    position: sticky;
+    top: 2rem;
+    margin-top: 0;
+    height: fit-content;
+  }
+
+  .item-cantidad button {
+    width: 32px;
+    height: 32px;
+    transition: background-color 0.2s ease;
+  }
+
+  .item-cantidad button:hover {
+    opacity: 0.9;
+  }
+
+  .modal-actions {
+    grid-column: span 2;
+    justify-content: flex-end;
+    gap: 1.5rem;
+  }
+
+  .btn-cancelar,
+  .btn-confirmar {
+    min-width: 150px;
+    transition: transform 0.2s ease;
+  }
+
+  .btn-cancelar:hover,
+  .btn-confirmar:hover {
+    transform: translateY(-1px);
+  }
+}
+
+/* Optimizaciones para pantallas extra grandes */
+@media screen and (min-width: 1440px) {
+  .modal-content {
+    max-width: 1400px;
+  }
+
+  .items-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .menu-item {
+    padding: 1.75rem;
+  }
+
+  .modal-content h2 {
+    font-size: 2rem;
+  }
+
+  .categoria-menu h4 {
+    font-size: 1.4rem;
+  }
+
+  .item-info span:first-child {
+    font-size: 1.2rem;
+  }
+
+  .total {
+    font-size: 1.5rem;
+  }
+}
+
+/* Scroll personalizado para PC */
+@media screen and (min-width: 1024px) {
+  .modal-content::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 6px;
+  }
+
+  .modal-content::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 6px;
+  }
+
+  .modal-content::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+  }
+}
+
+/* Ajustes para modo oscuro en PC */
+@media screen and (min-width: 1024px) and (prefers-color-scheme: dark) {
+  .modal-content {
+    border-right-color: #444;
+  }
+
+  .modal-content::-webkit-scrollbar-track {
+    background: #2d2d2d;
+  }
+
+  .modal-content::-webkit-scrollbar-thumb {
+    background: #666;
+  }
+
+  .modal-content::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+  }
+}
+
+/* Optimizaciones para monitores de alta resolución */
+@media screen and (min-width: 1920px) {
+  .modal-content {
+    max-width: 1800px;
+    padding: 3rem;
+  }
+
+  .items-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .menu-item {
+    padding: 2rem;
+  }
+
+  .form-group label {
+    font-size: 1.2rem;
+  }
+
+  .form-group input {
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+}
